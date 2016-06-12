@@ -13,4 +13,4 @@ The tests need babel to run (async/await is not supported yet by nodejs):
 License
 =======
 
-See LICENSE.
+See [LICENSE](LICENSE).
