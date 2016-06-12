@@ -337,4 +337,28 @@ describe('async/await', function () {
         }
 
     });
+
+
+    // No-op function that returns `undefined` but is marked async
+    async function doNothing() {
+    }
+
+
+    // Here we see that an async function always wraps its result inside a promise, also when
+    // it is not even asynchronous.
+    it('A synchronous function that is marked async returns a promise', function (done) {
+        log(test, 'run the synchronous function');
+
+        doNothing()
+            .then(() => {
+                log(test, 'then handler');
+                done();
+            })
+            .catch((error) => {
+                log(test, 'catch handler:', error);
+                done(error);
+            });
+
+        log(test, 'end of test');
+    });
 });
