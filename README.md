@@ -10,6 +10,14 @@ The tests need babel to run (async/await is not supported yet by nodejs):
     $ npm test
 
 
+Background
+==========
+
+For a theoretical introduction on how async/await works see this
+[blog post](https://zeit.co/blog/async-and-await).
+
+
+
 License
 =======
 
